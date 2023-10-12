@@ -5,7 +5,7 @@ export default async function Home() {
   const res = await data.json();
   return (
     <main>
-      <div className="grid grid-cols-5 gap-10 mx-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mx-8 md:mx-16 lg:mx-24">
         {res.results.map((movie) => ( 
           <Movie
             key={movie.id}

@@ -16,7 +16,7 @@ export default function Movie ({
                     alt={title}
                 />
             </Link>
-                <h1 className="text-xl px-4 py-3">{title}</h1>
+                <h1 className="text-2xl md:text-xl px-4 py-3 mt-2">{title}</h1>
         </div>
     )
 }
