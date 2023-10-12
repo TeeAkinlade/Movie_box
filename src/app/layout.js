@@ -1,7 +1,12 @@
+import Link from 'next/link'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ 
+  subsets: ['latin'], 
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en">    
+      <body className={`${montserrat.variable} bg-[#1a1919] text-white`}> 
+        <div className='flex items-center justify-between px-24 mb-10 shadow-white shadow-sm py-6'>
+          <Link  href="/" className='text-4xl text-center font-semibold'>Movie <span className='text-cyan-500'>Box</span></Link>
+          <Link href="/about" className='text-xl'>About</Link>
+        </div>      
+        {children}
+      </body>
     </html>
   )
 }
